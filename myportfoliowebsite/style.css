@@ -1,0 +1,125 @@
+/* Smooth scrolling for sidebar links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global page styling */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    background: #f8fafa;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 260px;
+    background: #003c3c;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+}
+
+/* Profile picture styling with animation */
+.profile-pic {
+    width: 200px;
+    height: 227px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 25px;
+    border: 4px solid #4fd1c5;
+    animation: popIn 1.2s ease forwards;
+}
+
+/* Profile picture animation */
+@keyframes popIn {
+    0% { transform: scale(0.6); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Sidebar name */
+.name {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Sidebar navigation */
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    margin: 15px 0;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Hover animation for sidebar links */
+.nav a:hover {
+    color: #4fd1c5;
+    padding-left: 8px;
+}
+
+/* Main content area */
+.main {
+    margin-left: 280px;
+    padding: 40px;
+}
+
+/* Section spacing */
+section {
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Fade-in animation delays for each section */
+section:nth-of-type(1) { animation-delay: 0.2s; }
+section:nth-of-type(2) { animation-delay: 0.4s; }
+section:nth-of-type(3) { animation-delay: 0.6s; }
+section:nth-of-type(4) { animation-delay: 0.8s; }
+section:nth-of-type(5) { animation-delay: 1.0s; }
+section:nth-of-type(6) { animation-delay: 1.2s; }
+section:nth-of-type(7) { animation-delay: 1.4s; }
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Headings */
+h1 {
+    color: #003c3c;
+    font-size: 32px;
+}
+
+h2 {
+    color: #006b6b;
+    font-size: 24px;
+}
+
+/* Resume download button */
+.download-btn {
+    padding: 12px 22px;
+    background: #006b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #004f4f;
+}
